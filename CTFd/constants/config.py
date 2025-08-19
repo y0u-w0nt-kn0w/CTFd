@@ -96,5 +96,13 @@ class _ConfigsWrapper:
     def privacy_link(self):
         return get_config("privacy_url", default=url_for("views.privacy"))
 
+    @property
+    def social_shares(self):
+        return get_config("social_shares", default=True)
+
+    @property
+    def challenge_ratings(self):
+        return get_config("challenge_ratings", default="public")
+
 
 Configs = _ConfigsWrapper()
